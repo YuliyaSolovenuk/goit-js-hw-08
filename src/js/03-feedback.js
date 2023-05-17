@@ -29,6 +29,7 @@ formEl.addEventListener('input', throttle(onFormInput, 500))
 
 function onFormSubmit(ev) {
     ev.preventDefault();
+
     if (!email.value  || !message.value.trim()) {
         return alert("Please fill in the blanks!")
     }
@@ -37,6 +38,8 @@ function onFormSubmit(ev) {
     ev.target.reset();
 
     localStorage.removeItem(STORAGE_KEY)
+
+    formData = {}
 }
 
 
